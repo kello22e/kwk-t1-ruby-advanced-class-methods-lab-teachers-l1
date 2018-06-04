@@ -10,9 +10,14 @@ class Song
   
   def self.new_by_name(name)
     song = self.new
-    @name = name
+    song.name = name
     return song
   end
+  
+  def self.find_or_create_by_name(name)
+  end
+  
+  def self.alphabetical
   
   def self.create_by_name(name)
   end
