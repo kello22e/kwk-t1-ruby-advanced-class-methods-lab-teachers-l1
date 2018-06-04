@@ -5,11 +5,13 @@ class Song
   def self.create 
     song = self.new
     song.save
+    return song
   end
   
   def self.new_by_name(name)
+    song = self.new
     @name = name
-    return self
+    return song
   end
   
   def self.create_by_name(name)
