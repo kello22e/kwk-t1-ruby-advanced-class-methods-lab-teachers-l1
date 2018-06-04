@@ -6,6 +6,14 @@ class Song
     @@all << self
   end
   
+  def self.new_by_name(name)
+    @name = name
+    return self
+  end
+  
+  def self.create_by_name(name)
+  end
+  
   def self.all
     @@all
   end
@@ -14,11 +22,4 @@ class Song
     self.class.all << self
   end
   
-  def self.new_by_name(name)
-    @name = name
-    return self
-  end
-  
-  def create_by_name
-  end
 end
