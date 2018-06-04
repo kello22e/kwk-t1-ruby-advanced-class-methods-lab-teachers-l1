@@ -5,12 +5,16 @@ class Song
   def create 
     @@all << self
   end
+  
   def self.all
     @@all
   end
-
+  
   def save
     self.class.all << self
   end
-
+  
+  def new_by_name(name)
+    @name = name
+    
 end
