@@ -14,6 +14,12 @@ class Song
     return song
   end
   
+  def self.create_by_name(name)
+    song = self.new
+    song.name = name
+    return song
+  end
+  
   def self.find_or_create_by_name(name)
     find_by name(name) || create_by_name(name)
   end
