@@ -21,6 +21,7 @@ class Song
   end
   
   def self.find_by_name(name)
+    self.all.detect { |song| song.name == song_name }
   end
   
   def self.find_or_create_by_name(name)
@@ -31,7 +32,12 @@ class Song
     self.all.sort_by { |song| song.name }
   end
   
-  def self.create_from_filename(name)
+  def self.new_from_filename(song_name)
+    name = song_name.split("-")
+  end 
+  
+  def self.create_from_filename(song_name)
+    
   end 
   
   def self.destroy_all
