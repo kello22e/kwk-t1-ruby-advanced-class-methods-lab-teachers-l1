@@ -16,7 +16,11 @@ class Song
   
   def self.create_by_name(name)
     song = self.create
+    song.name = name
     return song
+  end
+  
+  def self.find_by_name(name)
   end
   
   def self.find_or_create_by_name(name)
@@ -27,6 +31,12 @@ class Song
     self.all.sort_by { |song| song.name }
   end
   
+  def self.create_from_filename(name)
+  end 
+  
+  def self.destroy_all
+    @@all.clear
+  end
   
   def self.all
     @@all
