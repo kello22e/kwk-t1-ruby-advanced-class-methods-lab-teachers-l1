@@ -39,7 +39,7 @@ class Song
     
     song = self.create
     song.artist_name = artist
-    song.name = name_of_song
+    song.name = name_of_song[0]
     song
   end 
   
@@ -50,7 +50,7 @@ class Song
     
     song = self.new
     song.artist_name = artist
-    song.name = name_of_song
+    song.name = name_of_song[0]
     song
   end 
   
